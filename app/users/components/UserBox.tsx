@@ -45,7 +45,7 @@ const UserBox: React.FC<UserBoxProps> = ({
                 hover:bg-neutral-100
                 rounded-lg
                 transition
-                cursore-pointer
+                cursor-pointer
             "
         >
             <Avatar user={data} />
