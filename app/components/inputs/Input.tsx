@@ -22,7 +22,6 @@ const Input: React.FC<InputProps> = ({
   errors,
   disabled,
 }) => {
-  console.log(label);
   return (
     <div>
       <label
