@@ -1,36 +1,39 @@
 import { IconType } from "react-icons";
 
 interface AuthSocialButtonProps {
-    icon: IconType,
-    onClick: () => void;
+   icon: IconType;
+   onClick: () => void;
+   children?: React.ReactNode;
 }
 
 const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
-    icon: Icon,
-    onClick
+   icon: Icon,
+   onClick,
+   children
 }) => {
-    return (
-        <button 
-        type="button"
-        onClick={onClick}
-        className="
-            inline-flex
-            w-full
-            justify-center
+   return (
+      <button
+         type="button"
+         onClick={onClick}
+         className="
+            px-3
+            py-3
             rounded-md
-            bg-gray-200
-            px-4
-            py-2
-            text-gray-500
             ring-1
-            ring-inset
-            ring-gray-300
-            hover:bg-gray-50
-            focus:outline-offset-0
-        ">
-            <Icon />
-        </button>
-    );
+            ring-gray-400
+            w-full
+            inline-flex
+            justify-center
+            items-center
+            gap-2 
+            transition-colors
+            hover:bg-gray-100
+         "
+      >
+         <Icon />
+         {children}
+      </button>
+   );
 }
 
 export default AuthSocialButton;
