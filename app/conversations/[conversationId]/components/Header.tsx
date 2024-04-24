@@ -32,10 +32,10 @@ const Header: React.FC<HeaderProps> = ({
 
       return isActive ? 'Active' : "Offline";
    }, [conversation, isActive]);
-   
+
    useMemo(() => {
       console.log(drawerOpen)
-  }, [drawerOpen])
+   }, [drawerOpen])
 
    return (
       <>
@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({
                         transition
                         cursor-pointer
                         "
-                  href="/coversations"
+                  href="/conversations"
                >
                   <HiChevronLeft size={32} />
                </Link>
